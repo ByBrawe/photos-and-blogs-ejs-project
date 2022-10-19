@@ -1,0 +1,47 @@
+<%- include("./partials/_header.ejs") %>
+     
+<%- include("./partials/_menu.ejs") %>
+
+
+      <!-- gallery -->
+      <div class="gallery">
+         <div class="container_with">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <span>Number Of Photos: <%= photos.length %></span>
+                     <h2>Lenslight Gallery Page</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="tz-gallery">
+                     <div class="row">
+
+
+                        <% for(photo of photos){  %>
+
+                        <div class="col-lg-4 col-md-6 ma_bottom30">
+                           <div class="lightbox">
+                              <img src=" <%= photo.url  %> " alt="<%= photo.name  %>">
+                              <div class="view_main">
+                                <div class="pose">
+                                <a class="read_more" href="/photos/<%= photo._id %> "><img src="images/ga.png" alt="#"/></a>
+                                <h1>  <%= photo.name  %>    </h1>
+                                <p> <%= photo.description %> </p>
+                              </div>
+                              </div>
+                           </div>
+                        </div>
+                        <% } %>
+                        
+                  <!-- <div class="col-md-12">
+                    <a class="plus_btn" href="gallery.html">+</a>
+                  </div> -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end gallery -->
+      
+
+ <%- include("./partials/_footer.ejs") %>

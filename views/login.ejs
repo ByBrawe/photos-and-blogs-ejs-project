@@ -1,0 +1,37 @@
+<%- include("./partials/_header.ejs") %>
+     
+<%- include("./partials/_menu.ejs") %>
+
+     
+
+      <!-- contact -->
+        <div class="contact">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 ">
+                <div class="titlepage text_align_center">
+                  <h2>Login</h2>
+                </div>
+              </div>
+              <div class="col-md-8 offset-md-2">
+                <form id="request" class="main_form" action="/users/login" method="POST">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input class="form_control" placeholder="Your name" type="type" name="username"> 
+                    </div>
+                    <div class="col-md-12">
+                      <input class="form_control" placeholder="Your Password" type="password" name="password">
+                    </div>
+                    <div class="col-md-12">
+                      <div class="group_form">
+                        <button class="send_btn">Login</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- end contact -->
+      <%- include("./partials/_footer.ejs") %>

@@ -1,0 +1,43 @@
+<div class="col-md-4">
+         
+    <div class="row" >
+          <!-- <div class="card" style="width: 18rem;">
+             <div class="card-header text-black bg-white">
+                <h1>Son Yorumlar</h1>
+             </div>    
+             <ul class="list-group list-group-flush">
+               <% for(commentList of commentsList){ %>
+                  <li class="list-group-item"><a href="/photos/<%= commentList._id %>"><%= commentList.content %></a></li>
+                 <%  } %>
+             </ul>
+          </div> -->
+        
+          <div class="card" style="width: 18rem; margin-top: 20px;">
+             <div class="card-header text-black bg-white">
+                <h1>Son Yazılar</h1>
+             </div>    
+             <ul class="list-group list-group-flush">
+
+            <% for(blogList of blogsList){ %>
+             <li class="list-group-item"><a href="/blog/<%= blogList._id %>"><%= blogList.title %></a></li>
+            <%  } %>
+
+             </ul>
+          </div>
+          
+          <div class="card" style="width: 18rem; margin-top: 20px;">
+             <div class="card-header text-black bg-white">
+                <h1>Son Fotoğraflar</h1>
+             </div>    
+             <ul class="list-group list-group-flush">
+
+               <% for(photoList of photosList){ %>
+                  <li class="list-group-item"><a href="/photos/<%= photoList._id %>"><%= photoList.name %></a></li>
+                 <%  } %>
+     
+             </ul>
+          </div>
+    
+       </div>
+
+   </div>

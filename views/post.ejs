@@ -1,0 +1,68 @@
+<%- include("partials/_header") %>
+
+      <%- include("partials/_menu") %>
+
+      <!-- contact -->
+        <div class="contact">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 ">
+                <div class="titlepage text_align_center">
+                  <h2>Add New Post</h2>
+                </div>
+              </div>
+              <div class="col-md-8 offset-md-2">
+                <form id="request" class="main_form" method="POST" action="/blog/post"  enctype="multipart/form-data">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input class="form_control" placeholder="Title" type="type" name="title"> 
+                    </div>
+                  
+                     <div class="form-group row">
+                           <label class="col-md-5 col-form-label" style="margin-left: 1em;" for="file_upload"><h3>Image upload:</h3></label>
+                           <div class="col-md-6">
+                              <input type="file" name="blog_image" class="form-control-file">
+                           </div>                           
+                    </div>
+                    <div class="col-md-12">
+                      <textarea class="form_control" placeholder="content"  rows="5" style="height: 20em;"  name="content"></textarea>
+                    </div>
+
+
+                     
+                      <div class="form-check col-md-12">
+                        <div class="form-group">
+                           <label for="exampleFormControlSelect2">Select Categories</label>
+                           <select multiple class="form-control" name="multiple" style="overflow: hidden;" id="exampleFormControlSelect2" multiple="multiple">
+                             <option value="photo">photo</option>
+                             <option value="news">news</option>
+                           </select>
+                         </div>
+                      </div>
+               
+                      </div>
+
+
+
+                    
+
+                    <div class="col-md-12">
+                      <div class="group_form">
+                        <button class="send_btn">Post</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- end contact -->
+   
+
+      <!-- end contact -->
+      <!-- end footer -->
+      <%- include("partials/_footer") %>
+
+      <!-- end footer -->
+      <!-- Javascript files-->

@@ -1,0 +1,78 @@
+<%- include("partials/_header") %>
+
+      <%- include("partials/_menu") %>
+
+    <!-- blog -->
+
+    <div class="container" style="margin-top: 5rem">
+      <div class="row">
+        <div class="col-md-8" style="word-wrap: break-word">
+         
+          <div class="card border-0">
+            <div class="card-header text-black bg-white">
+              <h1>Last Posts</h1>
+            </div>
+            
+
+            <% for(blog of blogs){%>
+
+            <div class="card border-0">
+              <div class="d-flex">
+                <figure class="figure" style="margin: 0.5em">
+                  <img
+                    src="<%= blog.url %>"
+                    class="figure-img"
+                    style="margin: 15px"
+                    alt="A."
+                    width="200px",
+                    height="200px"
+                  />
+                </figure>
+                <div class="card-body border-0">
+                  <h2 class="card-title"><a href="/blog/<%= blog.id %>"><%= blog.title %></a></h2>
+                  <small class="text-muted" style="padding-right: 0.5px">
+                    <h6 class="text-muted">
+                      <span>Tarih: <%= blog.createdAt.toLocaleDateString() %> </span>
+                      <span>Kategori: <%= blog.categories %> </span>
+                      <span>Author: <%= blog.user.username%></span>
+                      <i class="fa fa-eye"></i> 1347
+                      <i class="fa fa-comment"></i> <%= blog.comments.length%>
+                    </h6>
+                  </small>
+                  
+                  
+                  <p class="card-text" style="margin-bottom: 2.5em">
+                    <%= blog.content.substring(0,128) %>
+                  </p>
+                  <a href="/blog/<%= blog.id %>" class="btn btn-primary float-right">read more</a>
+                </div>
+              </div>
+            </div>
+            
+            <% }%>
+           
+
+            <nav aria-label="Page navigation" class="nav justify-content-center">
+               <ul class="pagination">
+                 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                 <li class="page-item"><a class="page-link" href="#">1</a></li>
+                 <li class="page-item"><a class="page-link" href="#">2</a></li>
+                 <li class="page-item"><a class="page-link" href="#">3</a></li>
+                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
+               </ul>
+             </nav>
+
+
+          </div>
+
+        </div>
+
+        <%- include("partials/_widget.ejs") %>
+        
+
+      </div>
+    </div>
+
+    <!-- end blog -->
+
+    <%- include("partials/_footer") %>
