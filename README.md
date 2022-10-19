@@ -1,6 +1,17 @@
+This project is still being developed
+
 # photos-and-blogs-ejs-project
 Share your photos and posts
 
+
+
+# Getting started
+
+Clone this repo
+npm install to install all required dependencies
+Create MongoDb Cluster and Get Connection MongoDb URI
+Set environment variables in .env 
+npm start
 
 ## Dependencies
 
@@ -18,3 +29,5 @@ Share your photos and posts
 - cookie-parser
 - nodemailer - Send e-mails from Node.js
  
+
+# Application Structure
