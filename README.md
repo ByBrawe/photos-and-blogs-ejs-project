@@ -8,10 +8,10 @@ Share your photos and posts
 # Getting started
 
 Clone this repo
-npm install to install all required dependencies
+`npm install` to install all required dependencies
 Create MongoDb Cluster and Get Connection MongoDb URI
 Set environment variables in .env 
-npm start
+`npm start`
 
 ## Dependencies
 
