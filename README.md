@@ -30,4 +30,15 @@ npm start
 - nodemailer - Send e-mails from Node.js
  
 
-# Application Structure
+# Application Features
+- Basic blog and comment 
+- Basic Widget 
+- Photo sharing system (Editing and Deleting your sharing)
+- User system 
+- Authentication Middleware
+- MVC Pattern
+- Ejs template
+- Contact Page
+- Galery Page
+- MongoDb CRUD Operations
+
