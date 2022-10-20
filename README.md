@@ -43,4 +43,4 @@ Share your photos and posts
 - Contact Page
 - Galery Page
 - MongoDb CRUD Operations
-
+- pagination and limit for blog page (example /blog?page=2%limit=3)
