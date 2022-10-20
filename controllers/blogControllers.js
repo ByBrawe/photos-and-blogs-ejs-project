@@ -11,8 +11,40 @@ const getBlog = async(req,res,err)=>{
 
 
     try{
-        const blogs = await Blog.find({}).populate("user").limit(5).sort({createdAt : -1});
 
+        // Query
+        const page = parseInt(req.query.page) || 1
+        const limit = parseInt(req.query.limit) || 5;
+    
+        // Front end hesaplama
+        const startIndex = (page-1) * limit // ?page=1 için 0. dan başlatmış olacak
+        const endIndex = page * limit // teorik page ve sayfaya göre toplamı gösterecek
+        const pagination = {};
+        const total =  await Blog.countDocuments();
+
+
+
+        if (startIndex>0 ){
+
+            pagination.prev = {
+                page : page - 1,
+                limit
+            }
+        }
+
+
+        if (endIndex < total) {
+
+            pagination.next = {
+                page : page + 1,
+                limit
+            }
+
+        }
+
+      const blogs = await Blog.find({}).populate("user").sort({createdAt : -1}).limit(limit).skip(startIndex);
+
+       console.log(pagination)
 
 
        const data = await dataList()
@@ -28,6 +60,8 @@ const getBlog = async(req,res,err)=>{
             photosList,
             blogsList,
             commentsList,
+            pagination,
+            page,
             link: "blog"
         })
 
