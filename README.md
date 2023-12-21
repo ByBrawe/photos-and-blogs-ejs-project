@@ -3,7 +3,7 @@ This project is still being developed
 # photos-and-blogs-ejs-project
 Share your photos and posts
 
-[Demo](https://bb-photos.herokuapp.com/)
+[Demo](https://photos-and-blogs-ejs-project.glitch.me/)
 
 
 
